@@ -1,5 +1,6 @@
-package com.springboot.luckymoney;
+package com.springboot.luckymoney.repository;
 
+import com.springboot.luckymoney.Luckymoney;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

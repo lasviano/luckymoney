@@ -1,5 +1,10 @@
-package com.springboot.luckymoney;
+package com.springboot.luckymoney.controller;
 
+import com.springboot.luckymoney.Luckymoney;
+import com.springboot.luckymoney.repository.LuckymoneyRepository;
+import com.springboot.luckymoney.service.LuckymoneyService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,9 +14,13 @@ import java.util.Optional;
 
 @RestController
 public class LuckymoneyController {
+    private final static Logger logger = LoggerFactory.getLogger(LuckymoneyController.class);
 
     @Autowired
     private LuckymoneyRepository repository;
+
+    @Autowired
+    private LuckymoneyService service;
 
     @GetMapping("/hello")
     public String hello(){
@@ -23,6 +32,8 @@ public class LuckymoneyController {
      */
     @GetMapping("/luckymoneys")
     public List<Luckymoney> getlist(){
+//        System.out.println("luckymoneyList");
+        logger.info("luckymoneyList");
         return repository.findAll();
     }
 
@@ -60,5 +71,10 @@ public class LuckymoneyController {
             return repository.save(luckymoney);
         }
         return null;
+    }
+
+    @PostMapping("/luckymoneys/two")
+    public void create(){
+        service.sendLuckymoney();
     }
 }
