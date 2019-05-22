@@ -1,6 +1,6 @@
 package com.springboot.luckymoney.service;
 
-import com.springboot.luckymoney.Luckymoney;
+import com.springboot.luckymoney.domain.Luckymoney;
 import com.springboot.luckymoney.repository.LuckymoneyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

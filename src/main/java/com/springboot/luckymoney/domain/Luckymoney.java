@@ -1,10 +1,11 @@
-package com.springboot.luckymoney;
+package com.springboot.luckymoney.domain;
 
 import org.springframework.stereotype.Component;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 
 @Entity
@@ -14,6 +15,7 @@ public class Luckymoney {
     @GeneratedValue
     private Integer id;
 
+    @Min(value = 50,message = "红包太小")
     private BigDecimal money;
 
     private String consumer;
@@ -50,5 +52,15 @@ public class Luckymoney {
 
     public void setProducer(String producer) {
         this.producer = producer;
+    }
+
+    @Override
+    public String toString() {
+        return "Luckymoney{" +
+                "id=" + id +
+                ", money=" + money +
+                ", consumer='" + consumer + '\'' +
+                ", producer='" + producer + '\'' +
+                '}';
     }
 }
