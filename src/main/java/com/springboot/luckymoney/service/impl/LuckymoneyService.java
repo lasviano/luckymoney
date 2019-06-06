@@ -1,4 +1,4 @@
-package com.springboot.luckymoney.service;
+package com.springboot.luckymoney.service.impl;
 
 import com.springboot.luckymoney.domain.Luckymoney;
 import com.springboot.luckymoney.repository.LuckymoneyRepository;

@@ -1,16 +1,29 @@
 server:
-#  port: 8081
+  port: 8083
   servlet:
     context-path: /luckymoney
 
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/luckymoney?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-#    url: jdbc:mysql://localhost:3306/luckymoney?serverTimezone=GMT
+#    url: jdbc:mysql://localhost:3306/luckymoney?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://212.64.122.64:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: 123456
+#    password: 123456
+    password: ${txCloudPassWord}
+
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+  profiles:
+    active: test
+
+#app:
+#  id: luckymoney
+#apollo:
+#  meta: http://127.0.0.1:8080
+#  bootstrap:
+#    enabled: true
+#    namespaces: application,TEST1.money

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<gateway>
+<!--	<request pattern="/resources/**" method="get" required="false" />-->
+<!--	<request pattern="/go" method="get" required="false" />-->
+<!--	<request pattern="/" method="get" required="false" />-->
+<!--	<request pattern="/oss/receive" method="post" required="false" />-->
+<!--	&lt;!&ndash;Swagger&ndash;&gt;-->
+<!--	<request pattern="/swagger-resources/**" method="get" required="false"/>-->
+<!--	<request pattern="/v2/api-docs/**" method="get" required="false"/>-->
+<!--	<request pattern="/swagger-ui.html" method="get" required="false"/>-->
+<!--	<request pattern="^/webjars/springfox-swagger-ui/.*(js|css|png|ttf|gif)$,/swagger-resources/**" method="get"-->
+<!--			 required="false"/>-->
+
+<!--	<request pattern="/apollo" method="get" required="false" />-->
+</gateway>
