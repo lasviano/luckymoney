@@ -1,3 +1,5 @@
+cd /d %~dp0
+
 set curWorkPath=%~dp0
 set bullseyeResultPath=%COVFILE%
 set trunkPath=%curWorkPath%\..\..\..\
