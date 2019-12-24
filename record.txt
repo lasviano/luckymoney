@@ -2,4 +2,4 @@
 	   
            modify test.bat    --add cd currentDir
 
-2019-12-24 
+2019-12-24 test git fetch and rebase
